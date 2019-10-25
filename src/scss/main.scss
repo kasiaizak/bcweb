@@ -19,6 +19,9 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   height: 100vh;
+  @media (min-width: $tablet) {
+    font-size: 18px;
+  }
 }
 
 .main {
@@ -55,6 +58,9 @@ body {
     &--search, &--menu {padding: 5px;}
     &--search {
       display: none;
+      @media screen and (min-width: $tablet) {
+        display: initial;
+      }
     }
   }
 }
@@ -62,10 +68,16 @@ body {
 .header {
   &__content {
     text-align: center;
+    @media (min-width: $tablet) {
+      line-height: 25px;
+    }
   }
 
   &__title {
     font-size: 1.5rem;
     font-weight: 700;
+    @media (min-width: $tablet) {
+      font-size: 2rem;
+    }
   }
 }
