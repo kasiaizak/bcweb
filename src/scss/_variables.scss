@@ -1,1 +1,5 @@
 $tablet: 768px;
+
+@mixin free-space {
+  padding: 0 10vw 0;
+}
