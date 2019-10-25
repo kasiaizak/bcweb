@@ -33,6 +33,9 @@ body {
   justify-content: center;
   position: relative;
   @include free-space;
+  @media (min-width: $laptop) {
+    @include free-space-laptop;
+  }
 }
 
 .navigation {
@@ -45,6 +48,9 @@ body {
   top: 0;
   width: 100%;
   @include free-space;
+  @media (min-width: $laptop) {
+    @include free-space-laptop;
+  }
 
   &__item {
     height: 100%;
