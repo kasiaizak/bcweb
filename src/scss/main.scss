@@ -31,6 +31,7 @@ body {
   flex-direction: column;
   height: 100%;
   justify-content: center;
+  overflow: hidden;
   position: relative;
   @include free-space;
   @media (min-width: $laptop) {
@@ -119,8 +120,40 @@ body {
 
 .content {
   display: none;
-
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin-top: 100px;
+  width: 100%;
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
   &--visible {
     display: flex;
+  }
+}
+
+.menu {
+  font-weight: 700;
+  line-height: 30px;
+  list-style: none;
+  padding-left: 0;
+  text-transform: uppercase;
+  @media (min-width: $tablet) {
+    line-height: 60px;
+    padding-right: 40px;
+  }
+}
+
+.essence {
+  flex-grow: 2;
+  &__item {
+    display: none;
+  }
+}
+
+.offer, .articles, .contact {
+  &--visible {
+    display: block;
   }
 }
