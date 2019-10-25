@@ -36,6 +36,9 @@ body {
   @media (min-width: $laptop) {
     @include free-space-laptop;
   }
+  &--change-color {
+    background-color: rgba(33,150,243,0.85);
+  }
 }
 
 .navbar {
@@ -60,7 +63,8 @@ body {
         width: unset;
       }
       &-change-color {
-        path.st1 {fill:#fff;};
+        path.circle {fill:#fff;};
+        path.letter {fill: #42A5F5;}
       }
     }
     &--buttons {
