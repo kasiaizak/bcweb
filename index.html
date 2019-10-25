@@ -21,17 +21,30 @@
 </head>
 <body>
   <main class="main">
-    <nav class="navigation">
-      <img src="assets/img/logo_white.svg" alt="logo bcweb.pl" class=" navigation__item navigation__item--left">
-      <div class="navigation__item navigation__item--right"><i class="fas fa-search navigation__item--search"></i> <i class="fas fa-bars navigation__item--menu"></i></div>
+    <nav class="navbar">
+      <img src="assets/img/logo_white.svg" alt="logo bcweb.pl" class="navbar__item navbar__item--logo">
+      <div class="navbar__item navbar__item--buttons button">
+        <button class="button__search"><i class="fas fa-search"></i></button>
+        <button class="button__menu button__menu--js"><i class="fas fa-bars"></i></button>
+      </div>
     </nav>
-    <header class="header">
-      <section class="header__content">
+    <header class="header header--js">
+      <section class="header__essence">
         <h1 class="header__title">Strony www i sklepy internetowe.</h1>
-        <p class="header__content">Powstaliśmy aby swoją pracą ustalać nowe standardy i rewolucjonizować branżę.<br>
+        <p>Powstaliśmy aby swoją pracą ustalać nowe standardy i rewolucjonizować branżę.<br>
         Realizujemy swoje plany i marzenia, tworząc strony www i sklepy internetowe.</p>
       </section>
     </header>
+    <section class="content content--js">
+      <ul class="navigation">
+          <li>Strona główna</li>
+          <li>O nas</li>
+          <li>Oferta</li>
+          <li>Realizacje</li>
+          <li>Artykuły</li>
+          <li>Kontakt</li>
+        </ul>
+    </section>
   </main>
   <script src="js/main.js"></script>
 </body>

@@ -350,7 +350,7 @@ body {
     .main {
       padding: 0 20vw 0; } }
 
-.navigation {
+.navbar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -367,15 +367,15 @@ body {
   width: 100%;
   padding: 0 10vw 0; }
   @media (min-width: 1440px) {
-    .navigation {
+    .navbar {
       padding: 0 20vw 0; } }
-  .navigation__item {
+  .navbar__item {
     height: 100%;
     width: 50%; }
     @media (min-width: 768px) {
-      .navigation__item--left {
+      .navbar__item--logo {
         width: unset; } }
-    .navigation__item--right {
+    .navbar__item--buttons {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
@@ -384,31 +384,42 @@ body {
       display: flex;
       -webkit-box-pack: end;
           -ms-flex-pack: end;
-              justify-content: flex-end;
-      font-size: 1.5rem; }
-      @media (min-width: 768px) {
-        .navigation__item--right {
-          padding: 5px;
-          width: 100%; } }
-    .navigation__item--search, .navigation__item--menu {
-      padding: 10px; }
-    .navigation__item--search {
-      display: none; }
-      @media screen and (min-width: 768px) {
-        .navigation__item--search {
-          display: initial; } }
+              justify-content: flex-end; }
 
-.header__content {
+.button {
+  font-size: 1.5rem; }
+  @media (min-width: 768px) {
+    .button {
+      padding: 5px;
+      width: 100%; } }
+  .button__search, .button__menu {
+    padding: 10px; }
+  .button__search {
+    display: none; }
+    @media screen and (min-width: 768px) {
+      .button__search {
+        display: initial; } }
+
+.header__essence {
   text-align: center; }
   @media (min-width: 768px) {
-    .header__content {
+    .header__essence {
       line-height: 25px; } }
+  .header__essence__title {
+    font-size: 1.5rem;
+    font-weight: 700; }
+    @media (min-width: 768px) {
+      .header__essence__title {
+        font-size: 2rem; } }
 
-.header__title {
-  font-size: 1.5rem;
-  font-weight: 700; }
-  @media (min-width: 768px) {
-    .header__title {
-      font-size: 2rem; } }
+.header--hide {
+  display: none; }
+
+.content {
+  display: none; }
+  .content--visible {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
 
 /*# sourceMappingURL=main.css.map */
