@@ -21,7 +21,7 @@
 </head>
 <body>
   <main class="main main--js">
-    <nav class="navbar">
+    <nav class="navbar navbar--js">
       <!-- <img src="assets/img/logo.svg" alt="logo bcweb.pl" class="navbar__item navbar__item--logo"> -->
       <svg version="1.1" id="Warstwa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 465.9 88.7" style="enable-background:new 0 0 465.9 88.7;" xml:space="preserve" class="navbar__item navbar__item--logo">
         <style type="text/css">
@@ -57,15 +57,13 @@
       </div>
     </nav>
     <header class="header header--js">
-      <section class="header__essence">
-        <h1 class="header__title">Strony www i sklepy internetowe.</h1>
-        <p>Powstaliśmy aby swoją pracą ustalać nowe standardy i rewolucjonizować branżę.<br>
-        Realizujemy swoje plany i marzenia, tworząc strony www i sklepy internetowe.</p>
-      </section>
+      <h1 class="header__title">Strony www i sklepy internetowe.</h1>
+      <p>Powstaliśmy aby swoją pracą ustalać nowe standardy i rewolucjonizować branżę.<br>
+      Realizujemy swoje plany i marzenia, tworząc strony www i sklepy internetowe.</p>
     </header>
     <div class="content content--js">
       <ul class="menu">
-        <li class="menu__item menu__item--homepage">Strona główna</li>
+        <li class="menu__item menu__item--homepage menu__item--homepage-js">Strona główna</li>
         <li class="menu__item menu__item--about">O nas</li>
         <li class="menu__item menu__item--offer menu__item--offer-js">Oferta</li>
         <li class="menu__item menu__item--projects">Realizacje</li>
@@ -73,9 +71,60 @@
         <li class="menu__item menu__item--contact menu__item--contact-js">Kontakt</li>
       </ul>
       <div class="essence">
-        <section class="essence__item essence__item--offer offer offer--js"><h2>Oferta</h2></section>
-        <section class="essence__item essence__item--articles articles articles--js"><h2>Artykuły</h2></section>
-        <section class="essence__item essence__item--contact contact contact--js"><h2>Kontakt</h2></section>
+        <section class="essence__item essence__item--offer offer offer--js">
+          <h2 class="essence__header">Oferta</h2>
+          <ul class="offer__items">
+            <li class="offer__item"><span>Strony internetowe</span></li>
+            <li class="offer__item"><span>Sklepy internetowe</span></li>
+            <li class="offer__item"><span>Projektowanie graficzne</span></li>
+            <li class="offer__item"><span>Druk materiałów reklamowych</span></li>
+            <li class="offer__item"><span>Prezentacje i animacje 2D</span></li>
+            <li class="offer__item"><span>Copywriting</span></li>
+          </ul>
+        </section>
+        <section class="essence__item essence__item--articles articles articles--js">
+          <h2 class="essence__header">Artykuły</h2>
+          <ul class="articles__items">
+            <li class="articles__item">System CMS - prostota i bezpieczeństwo</li>
+            <li class="articles__item">Domena, serwer i poczta</li>
+            <li class="articles__item">Projekt graficzny strony internetowej</li>
+            <li class="articles__item">Pomoc powdrożeniowa</li>
+            <li class="articles__item">Współczesne standardy i responsywność</li>
+            <li class="articles__item">Etapy realizacji projektu strony www</li>
+            <li class="articles__item">Wysokie pozycje w wyszukiwarkach</li>
+          </ul>
+          </section>
+        <section class="essence__item essence__item--contact contact contact--js">
+          <h2 class="essence__header">Kontakt</h2>
+          <form action="" method="POST" class="contact__form">
+            <h3 class="contact__header">Wyślij nam wiadomość</h3>
+            <p class="form__item">
+              <label for="personal">Imię i nazwisko*</label>
+              <input name="personal" id="personal" type="text" required >
+            </p>
+            <p class="form__item">
+              <label for="email">Adres email*</label>
+              <input name="email" id="email" type="email" required>
+            </p>
+            <p class="form__item">
+              <label for="message">Treść</label>
+              <textarea name="message" id="message" cols="30" rows="1"></textarea>
+            </p>
+            <div class="form__footer">
+              <div class="form__consent">
+                <p>
+                  <input name="consent" id="consent-marketing" type="checkbox">
+                  <label for="consent-marketing">Wyrażam zgodę na otrzymywanie od Volkswagen Group Polska sp. z o.o. z siedzibą w Poznaniu informacji handlowych za pośrednictwem środków komunikacji elektronicznej</label>
+                </p>
+                <p>
+                  <input name="consent" id="consent-rodo" type="checkbox" required>
+                  <label for="consent-rodo">Wyrażam zgodę na przetwarzanie moich danych osobowych przez Volkswagen Group Polska sp. z o.o. z siedzibą w Poznaniu w celach marketingowych.</label>
+                </p>
+              </div>
+              <input type="submit" value="Wyślij">
+            </div>
+          </form>
+        </section>
       </div>
     </div>
   </main>
