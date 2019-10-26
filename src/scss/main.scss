@@ -1,6 +1,6 @@
 @import "_normalize";
 @import "_variables";
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700,900&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,900&display=swap&subset=latin-ext');
 @import "fontawesome/fontawesome.scss";
 @import "fontawesome/solid.scss";
 
@@ -35,7 +35,7 @@ body {
   min-height: 100vh;
   position: relative;
   @include free-space;
-  @media (min-width: $tablet) { @include free-space-tablet; }
+  @media (min-width: $tablet) { @include free-space-tablet;}
   @media (min-width: $laptop) { @include free-space-laptop; }
   &--change-color {
     background-color: rgba(33,150,243,0.85);
@@ -123,7 +123,7 @@ body {
 }
 
 .menu {
-  font-weight: 700;
+  font-weight: 600;
   line-height: 2rem;
   text-transform: uppercase;
   @include reset-list;
@@ -144,7 +144,7 @@ body {
   }
   @media (min-width: $tablet) {
     line-height: 60px;
-    padding-right: 40px;
+    padding-right: 120px;
   }
 }
 
@@ -155,7 +155,7 @@ body {
   flex-grow: 2;
   &__header {
     font-size: 2em;
-    letter-spacing: 0.08em;
+    font-weight: 600;
     margin-bottom: 1.8em;
     position: relative;
     &::after {
@@ -166,7 +166,7 @@ body {
       bottom: -15px;
       position: absolute;
       left: 0;
-      border-color: rgba(255,255,255,0.4);
+      border-color: $blue;
     }
   }
   &__item {
@@ -223,5 +223,55 @@ body {
 }
 
 .contact {
+  &__header {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 1.5em;
+  }
+  &__form {
+    line-height: 2em;
+    width: 90%;
+    &-item {
+      input, textarea {
+        background-color: rgba(255,255,255,0);
+        border: 1px solid $blue;
+        float: right;
+        height: 2.5em;
+        width: 70%;
+      }
+    }
+    &-footer {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 2em;
+      input[type="submit"] {
+        background-color: $blue;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 1.1em;
+        font-weight: 600;
+        margin-top: 1em;
+        padding: 10px 30px;
+        text-transform: uppercase;
+      }
+    }
+    &-consent {
+      font-size: 0.7em;
+      line-height: 1.2em;
+      width: 50%;
+      p {
+        display: flex;
+        align-items: center;
+        input[type="checkbox"] {
+          background-color: rgba(255,255,255,0);
+          border: 2px solid #fff;
+          color: #fff;
+          font-size: 2em;
+          margin-right: 15px;
+        }
+      }
+    }
+  }
   &--visible { display: block; }
 }
