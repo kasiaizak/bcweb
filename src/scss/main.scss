@@ -1,6 +1,6 @@
 @import "_normalize";
 @import "_variables";
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700,900&display=swap&subset=latin-ext');
 @import "fontawesome/fontawesome.scss";
 @import "fontawesome/solid.scss";
 
@@ -146,7 +146,25 @@ body {
 }
 
 .essence {
+  font-size: 1rem;
+  font-weight: 300;
   flex-grow: 2;
+  &__header {
+    font-size: 2em;
+    letter-spacing: 0.08em;
+    margin-bottom: 1.1em;
+    position: relative;
+    &::after {
+      content: '';
+      border: 1px;
+      border-bottom-style: solid;
+      width: 100%;
+      bottom: -15px;
+      position: absolute;
+      left: 0;
+      border-color: rgba(255,255,255,0.4);
+    }
+  }
   &__item {
     display: none;
   }
@@ -154,24 +172,38 @@ body {
 
 .offer {
   &__items {
+    display: flex;
+    flex-wrap: wrap;
     @include reset-list;
   }
-  &--visible {
-    display: block;
+  &__item {
+    border: 1px solid $blue;
+    box-sizing: content-box;
+    line-height: 1.5em;
+    margin: 5px;
+    padding-top: 23%;
+    position: relative;
+    width: 23%;
+    span {
+      left: 50%;
+      position: absolute;
+      text-align: center;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      width: 95%;
+    }
+    &:hover { background-color: rgba(255,255,255,0.4); }
   }
+  &--visible { display: block; }
 }
 
 .articles {
   &__items {
     @include reset-list;
   }
-  &--visible {
-    display: block;
-  }
+  &--visible { display: block; }
 }
 
 .contact {
-  &--visible {
-    display: block;
-  }
+  &--visible { display: block; }
 }
