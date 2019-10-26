@@ -1,24 +1,39 @@
 "use strict";
 
 // hamburger menu
-const contentSwitcher = document.querySelector('.button__menu--js');
+const buttonMenu = document.querySelector('.button__menu--js');
 
-contentSwitcher.addEventListener('click', (e) => {
+const contentSwitcher = (e) => {
   const main = document.querySelector('.main--js');
+  const navbar = document.querySelector('.navbar--js');
   const logo = document.querySelector('.navbar__item--logo-js');
   const header = document.querySelector('.header--js');
   const content = document.querySelector('.content--js');
 
-  main.classList.toggle('main--change-color')
+  main.classList.toggle('main--change-color');
+  navbar.classList.toggle('navbar--add-background');
   logo.classList.toggle('navbar__item--logo-change-color');
   header.classList.toggle('header--hide');
   content.classList.toggle('content--visible');
 
   if (content.classList.contains('content--visible')) {
-    contentSwitcher.innerHTML = '<i class="fas fa-times"></i>';
+    buttonMenu.innerHTML = '<i class="fas fa-times"></i>';
   } else {
-    contentSwitcher.innerHTML = '<i class="fas fa-bars"></i>';
+    buttonMenu.innerHTML = '<i class="fas fa-bars"></i>';
   }
+}
+
+buttonMenu.addEventListener('click', (e) => {
+  contentSwitcher();
+});
+
+
+// back to homepage from menu
+
+const showHomepage = document.querySelector('.menu__item--homepage-js');
+
+showHomepage.addEventListener('click', (e) => {
+  contentSwitcher();
 });
 
 

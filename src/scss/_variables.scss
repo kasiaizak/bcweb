@@ -1,10 +1,11 @@
 $tablet: 768px;
 $laptop: 1440px;
 
-@mixin free-space {
-  padding: 0 10vw 0;
-}
+@mixin free-space { padding: 5px 5vw; }
+@mixin free-space-tablet { padding: 5px 10vw; }
+@mixin free-space-laptop { padding: 5px 20vw; }
 
-@mixin free-space-laptop {
-  padding: 0 20vw 0;
+@mixin reset-list {
+  list-style: none;
+  padding-left: 0;
 }
