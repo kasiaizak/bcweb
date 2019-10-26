@@ -29,7 +29,7 @@ const showArticles = document.querySelector('.menu__item--articles-js');
 const showContact = document.querySelector('.menu__item--contact-js');
 const offer = document.querySelector('.offer--js');
 const articles = document.querySelector('.articles--js');
-const contact = document.querySelector('.offer--js');
+const contact = document.querySelector('.contact--js');
 
 showOffer.addEventListener('click', (e) => {
   showOffer.classList.toggle('menu__item--open');
