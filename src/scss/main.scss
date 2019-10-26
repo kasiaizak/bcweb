@@ -106,13 +106,16 @@ body {
 }
 
 .content {
+  align-items: center;
   display: none;
   flex-direction: column;
   flex-wrap: nowrap;
+  overflow: scroll;
   padding-top: 75px;
   width: 100%;
   @media (min-width: $tablet) {
     flex-direction: row;
+    height: 70vh;
     justify-content: space-between;
     padding-top: 0;
   }
@@ -146,13 +149,14 @@ body {
 }
 
 .essence {
+  align-self: flex-start;
   font-size: 1rem;
   font-weight: 300;
   flex-grow: 2;
   &__header {
     font-size: 2em;
     letter-spacing: 0.08em;
-    margin-bottom: 1.1em;
+    margin-bottom: 1.8em;
     position: relative;
     &::after {
       content: '';
@@ -177,6 +181,7 @@ body {
     @include reset-list;
   }
   &__item {
+    align-self: flex-start;
     border: 1px solid $blue;
     box-sizing: content-box;
     line-height: 1.5em;
@@ -199,7 +204,20 @@ body {
 
 .articles {
   &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     @include reset-list;
+  }
+  &__item {
+    padding: 1em 0;
+    width: 50%;
+    &::after {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      content: '\f061';
+      padding-left: 15px;
+    }
   }
   &--visible { display: block; }
 }
