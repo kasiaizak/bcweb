@@ -32,32 +32,41 @@ const articles = document.querySelector('.articles--js');
 const contact = document.querySelector('.offer--js');
 
 showOffer.addEventListener('click', (e) => {
+  showOffer.classList.toggle('menu__item--open');
   offer.classList.toggle('offer--visible');
   if (articles.classList.contains('articles--visible')) {
     articles.classList.remove('articles--visible');
+    showArticles.classList.remove('menu__item--open');
   }
   if (contact.classList.contains('contact--visible')) {
     contact.classList.remove('contact--visible');
+    showContact.classList.remove('menu__item--open');
   }
 });
 
 showArticles.addEventListener('click', (e) => {
+  showArticles.classList.toggle('menu__item--open');
   articles.classList.toggle('articles--visible');
   if (offer.classList.contains('offer--visible')) {
     offer.classList.remove('offer--visible');
+    showOffer.classList.remove('menu__item--open');
   }
   if (contact.classList.contains('contact--visible')) {
     contact.classList.remove('contact--visible');
+    showContact.classList.remove('menu__item--open');
   }
 });
 
 showContact.addEventListener('click', (e) => {
+  showContact.classList.toggle('menu__item--open');
   contact.classList.toggle('contact--visible');
   if (offer.classList.contains('offer--visible')) {
     offer.classList.remove('offer--visible');
+    showOffer.classList.remove('menu__item--open');
   }
   if (articles.classList.contains('articles--visible')) {
     articles.classList.remove('articles--visible');
+    showArticles.classList.remove('menu__item--open');
   }
 });
 

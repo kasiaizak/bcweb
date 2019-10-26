@@ -1,6 +1,8 @@
 @import "_normalize";
 @import "_variables";
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap&subset=latin-ext');
+@import "fontawesome/fontawesome.scss";
+@import "fontawesome/solid.scss";
 
 
 html {
@@ -78,6 +80,9 @@ body {
 
 .button {
   font-size: 1.5rem;
+  :focus {
+    outline: none;
+  }
   @media (min-width: $tablet) {
     padding: 5px;
     width: 100%;
@@ -127,6 +132,7 @@ body {
   @media (min-width: $tablet) {
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 0;
   }
   &--visible {
     display: flex;
@@ -139,6 +145,22 @@ body {
   list-style: none;
   padding-left: 0;
   text-transform: uppercase;
+  &__item {
+    &--offer, &--articles, &--contact {
+      &::after {
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        content: '\f0fe';
+        padding-left: 15px;
+      }
+    }
+    &--open::after {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      content: '\f067';
+      padding-left: 15px;
+    }
+  }
   @media (min-width: $tablet) {
     line-height: 60px;
     padding-right: 40px;
