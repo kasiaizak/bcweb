@@ -2,13 +2,14 @@
 
 // hamburger menu
 const buttonMenu = document.querySelector('.button__menu--js');
+const searchBar = document.querySelector('.navbar__search--js');
+const content = document.querySelector('.content--js');
 
 const contentSwitcher = (e) => {
   const main = document.querySelector('.main--js');
   const navbar = document.querySelector('.navbar--js');
   const logo = document.querySelector('.navbar__item--logo-js');
   const header = document.querySelector('.header--js');
-  const content = document.querySelector('.content--js');
 
   main.classList.toggle('main--change-color');
   navbar.classList.toggle('navbar--add-background');
@@ -20,6 +21,7 @@ const contentSwitcher = (e) => {
     buttonMenu.innerHTML = '<i class="fas fa-times"></i>';
   } else {
     buttonMenu.innerHTML = '<i class="fas fa-bars"></i>';
+    searchBar.classList.toggle('navbar__search--visible');
   }
 }
 
@@ -85,3 +87,26 @@ showContact.addEventListener('click', (e) => {
   }
 });
 
+
+// search
+
+const buttonSearch = document.querySelector('.button__search--js');
+
+buttonSearch.addEventListener('click', (e) => {
+  if (content.classList.contains('content--visible')) {
+    searchBar.classList.toggle('navbar__search--visible');
+  } else {
+    contentSwitcher();
+    searchBar.classList.toggle('navbar__search--visible');
+  }
+});
+
+
+$(function() {
+  $(".navbar__search--js").on("input.highlight", function() {
+    // Determine specified search term
+    const searchTerm = $(this).val();
+    // Highlight search term inside a specific context
+    $(".content--js").unmark().mark(searchTerm);
+  }).trigger("input.highlight").focus();
+});

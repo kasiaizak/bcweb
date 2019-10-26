@@ -19,7 +19,7 @@
   <!-- <script src="https://kit.fontawesome.com/e419c4505b.js" crossorigin="anonymous"></script> -->
   <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body id="body">
   <main class="main main--js">
     <nav class="navbar navbar--js">
       <!-- <img src="assets/img/logo.svg" alt="logo bcweb.pl" class="navbar__item navbar__item--logo"> -->
@@ -52,7 +52,8 @@
         </g>
         </svg>
       <div class="navbar__item navbar__item--buttons button">
-        <button class="button__search"><i class="fas fa-search"></i></button>
+        <input type="text" class="navbar__search navbar__search--js" placeholder="Szukaj na stronie">
+        <button class="button__search button__search--js"><i class="fas fa-search"></i></button>
         <button class="button__menu button__menu--js"><i class="fas fa-bars"></i></button>
       </div>
     </nav>
@@ -128,6 +129,8 @@
       </div>
     </div>
   </main>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.es6.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

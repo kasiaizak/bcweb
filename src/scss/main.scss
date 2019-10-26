@@ -67,6 +67,7 @@ body {
       align-items: center;
       display: flex;
       justify-content: flex-end;
+      position: relative;
       width: 100%;
     }
   }
@@ -74,6 +75,21 @@ body {
     background-color: rgb(33,150,243);
     @media (min-width: $tablet) { background: none; }
   }
+
+  &__search {
+    display: none;
+    position: absolute;
+    right: 50px;
+    top: 65px;
+    &--visible {
+      display: block;
+    }
+  }
+}
+
+mark {
+  background: rgb(236, 38, 160);
+  color: #fff;
 }
 
 .button {
