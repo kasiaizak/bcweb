@@ -19,7 +19,7 @@
   <!-- <script src="https://kit.fontawesome.com/e419c4505b.js" crossorigin="anonymous"></script> -->
   <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body id="body">
   <main class="main main--js">
     <nav class="navbar navbar--js">
       <!-- <img src="assets/img/logo.svg" alt="logo bcweb.pl" class="navbar__item navbar__item--logo"> -->
@@ -52,7 +52,8 @@
         </g>
         </svg>
       <div class="navbar__item navbar__item--buttons button">
-        <button class="button__search"><i class="fas fa-search"></i></button>
+        <input type="text" class="navbar__search navbar__search--js" placeholder="Szukaj na stronie">
+        <button class="button__search button__search--js"><i class="fas fa-search"></i></button>
         <button class="button__menu button__menu--js"><i class="fas fa-bars"></i></button>
       </div>
     </nav>
@@ -98,20 +99,20 @@
           <h2 class="essence__header">Kontakt</h2>
           <form action="" method="POST" class="contact__form">
             <h3 class="contact__header">Wyślij nam wiadomość</h3>
-            <p class="form__item">
+            <p class="contact__form-item">
               <label for="personal">Imię i nazwisko*</label>
-              <input name="personal" id="personal" type="text" required >
+              <input name="personal" id="personal" type="text" required>
             </p>
-            <p class="form__item">
+            <p class="contact__form-item">
               <label for="email">Adres email*</label>
               <input name="email" id="email" type="email" required>
             </p>
-            <p class="form__item">
+            <p class="contact__form-item">
               <label for="message">Treść</label>
               <textarea name="message" id="message" cols="30" rows="1"></textarea>
             </p>
-            <div class="form__footer">
-              <div class="form__consent">
+            <div class="contact__form-footer">
+              <div class="contact__form-consent">
                 <p>
                   <input name="consent" id="consent-marketing" type="checkbox">
                   <label for="consent-marketing">Wyrażam zgodę na otrzymywanie od Volkswagen Group Polska sp. z o.o. z siedzibą w Poznaniu informacji handlowych za pośrednictwem środków komunikacji elektronicznej</label>
@@ -121,13 +122,15 @@
                   <label for="consent-rodo">Wyrażam zgodę na przetwarzanie moich danych osobowych przez Volkswagen Group Polska sp. z o.o. z siedzibą w Poznaniu w celach marketingowych.</label>
                 </p>
               </div>
-              <input type="submit" value="Wyślij">
+              <div><input type="submit" value="Wyślij"></div>
             </div>
           </form>
         </section>
       </div>
     </div>
   </main>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.es6.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
