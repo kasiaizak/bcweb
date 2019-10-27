@@ -4868,7 +4868,7 @@ mark {
           flex-direction: column;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  overflow: scroll;
+  overflow: auto;
   padding-top: 75px;
   width: 100%; }
   @media (min-width: 768px) {
