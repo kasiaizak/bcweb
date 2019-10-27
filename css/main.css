@@ -4785,6 +4785,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1;
   padding: 5px 5vw; }
   @media (min-width: 768px) {
     .navbar {
@@ -4860,9 +4861,6 @@ mark {
     display: none; }
 
 .content {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -4875,6 +4873,9 @@ mark {
   width: 100%; }
   @media (min-width: 768px) {
     .content {
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
@@ -4911,13 +4912,15 @@ mark {
       padding-right: 120px; } }
 
 .essence {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
   font-size: 1rem;
-  font-weight: 300;
-  -webkit-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2; }
+  font-weight: 300; }
+  @media (min-width: 768px) {
+    .essence {
+      -ms-flex-item-align: start;
+          align-self: flex-start;
+      -webkit-box-flex: 2;
+          -ms-flex-positive: 2;
+              flex-grow: 2; } }
   .essence__header {
     font-size: 2em;
     font-weight: 600;
@@ -4925,7 +4928,7 @@ mark {
     position: relative; }
     .essence__header::after {
       content: '';
-      border: 1px;
+      border: 2px;
       border-bottom-style: solid;
       width: 100%;
       bottom: -15px;
@@ -4952,9 +4955,21 @@ mark {
           box-sizing: content-box;
   line-height: 1.5em;
   margin: 5px;
-  padding-top: 23%;
+  padding-top: 30%;
   position: relative;
-  width: 23%; }
+  width: 98%; }
+  @media (min-width: 768px) {
+    .offer__item {
+      padding-top: 45%;
+      width: 45%; } }
+  @media (min-width: 1024px) {
+    .offer__item {
+      padding-top: 31%;
+      width: 31%; } }
+  @media (min-width: 1440px) {
+    .offer__item {
+      padding-top: 22%;
+      width: 22%; } }
   .offer__item span {
     left: 50%;
     position: absolute;
@@ -4983,8 +4998,10 @@ mark {
   padding-left: 0; }
 
 .articles__item {
-  padding: 1em 0;
-  width: 50%; }
+  padding: 1em 0; }
+  @media (min-width: 1024px) {
+    .articles__item {
+      width: 50%; } }
   .articles__item::after {
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
@@ -5000,22 +5017,37 @@ mark {
   margin-bottom: 1.5em; }
 
 .contact__form {
-  line-height: 2em;
-  width: 90%; }
-  .contact__form-item input, .contact__form-item textarea {
-    background-color: rgba(255, 255, 255, 0);
-    border: 1px solid #49b0ff;
-    float: right;
-    height: 2.5em;
-    width: 70%; }
+  line-height: 2em; }
+  @media (min-width: 768px) {
+    .contact__form {
+      width: 90%; } }
+  .contact__form-item {
+    display: inline-block; }
+    @media (min-width: 768px) {
+      .contact__form-item {
+        display: block; } }
+    .contact__form-item input, .contact__form-item textarea {
+      background-color: rgba(255, 255, 255, 0);
+      border: 1px solid #49b0ff;
+      float: right;
+      height: 2.5em;
+      width: 100%; }
+      @media (min-width: 768px) {
+        .contact__form-item input, .contact__form-item textarea {
+          width: 55%; } }
+      @media (min-width: 1024px) {
+        .contact__form-item input, .contact__form-item textarea {
+          width: 70%; } }
   .contact__form-footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     margin-top: 2em; }
+    @media (min-width: 1024px) {
+      .contact__form-footer {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; } }
     .contact__form-footer input[type="submit"] {
       background-color: #49b0ff;
       border: none;
@@ -5028,8 +5060,10 @@ mark {
       text-transform: uppercase; }
   .contact__form-consent {
     font-size: 0.7em;
-    line-height: 1.2em;
-    width: 50%; }
+    line-height: 1.2em; }
+    @media (min-width: 1024px) {
+      .contact__form-consent {
+        width: 50%; } }
     .contact__form-consent p {
       display: -webkit-box;
       display: -ms-flexbox;
