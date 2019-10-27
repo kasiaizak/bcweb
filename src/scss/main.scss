@@ -126,7 +126,7 @@ mark {
   display: none;
   flex-direction: column;
   flex-wrap: nowrap;
-  overflow: scroll;
+  overflow: auto;
   padding-top: 75px;
   width: 100%;
   @media (min-width: $tablet) {
