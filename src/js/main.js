@@ -20,8 +20,8 @@ const contentSwitcher = (e) => {
   if (content.classList.contains('content--visible')) {
     buttonMenu.innerHTML = '<i class="fas fa-times"></i>';
   } else {
+    searchBar.classList.remove('navbar__search--visible');
     buttonMenu.innerHTML = '<i class="fas fa-bars"></i>';
-    searchBar.classList.toggle('navbar__search--visible');
   }
 }
 
