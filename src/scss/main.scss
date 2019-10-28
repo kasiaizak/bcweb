@@ -133,7 +133,7 @@ mark {
   @media (min-width: $tablet) {
     align-items: center;
     flex-direction: row;
-    height: 70vh;
+    height: 80vh;
     justify-content: space-between;
     padding-top: 0;
   }
@@ -172,6 +172,7 @@ mark {
   @media (min-width: $tablet) {
     align-self: flex-start;
     flex-grow: 2;
+    margin-top: 5vh;
   }
   &__header {
     font-size: 2em;
