@@ -2,9 +2,45 @@
 
 // hamburger menu
 const buttonMenu = document.querySelector('.button__menu--js');
-const searchBar = document.querySelector('.navbar__search--js');
+const buttonSearch = document.querySelector('.button__search--js');
 const content = document.querySelector('.content--js');
+const searchBar = document.querySelector('.navbar__search--js');
+const showHomepage = document.querySelector('.menu__item--homepage-js');
 
+const menuOffer = document.querySelector('.menu__item--offer-js');
+const menuArticles = document.querySelector('.menu__item--articles-js');
+const menuContact = document.querySelector('.menu__item--contact-js');
+const offer = document.querySelector('.offer--js');
+const articles = document.querySelector('.articles--js');
+const contact = document.querySelector('.contact--js');
+
+
+const hideOffer = (e) => {
+  offer.classList.remove('offer--visible');
+  menuOffer.classList.remove('menu__item--open');
+}
+
+const hideArticles = (e) => {
+  articles.classList.remove('articles--visible');
+  menuArticles.classList.remove('menu__item--open');
+}
+
+const hideContact = (e) => {
+  contact.classList.remove('contact--visible');
+  menuContact.classList.remove('menu__item--open');
+}
+
+const buttonMenuSwitcher = (e) => {
+  if (content.classList.contains('content--visible')) {
+    searchBar.classList.remove('navbar__search--visible');
+    buttonMenu.innerHTML = '<i class="fas fa-bars"></i>';
+  } else {
+    buttonMenu.innerHTML = '<i class="fas fa-times"></i>';
+  }
+}
+
+
+// change visible content
 const contentSwitcher = (e) => {
   const main = document.querySelector('.main--js');
   const navbar = document.querySelector('.navbar--js');
@@ -17,80 +53,61 @@ const contentSwitcher = (e) => {
   header.classList.toggle('header--hide');
   content.classList.toggle('content--visible');
 
-  if (content.classList.contains('content--visible')) {
-    buttonMenu.innerHTML = '<i class="fas fa-times"></i>';
-  } else {
-    searchBar.classList.remove('navbar__search--visible');
-    buttonMenu.innerHTML = '<i class="fas fa-bars"></i>';
+  if (!content.classList.contains('content--visible')) {
+    hideArticles();
+    hideContact();
+    hideOffer();
   }
 }
 
 buttonMenu.addEventListener('click', (e) => {
+  buttonMenuSwitcher();
   contentSwitcher();
 });
 
-
-// back to homepage from menu
-
-const showHomepage = document.querySelector('.menu__item--homepage-js');
-
 showHomepage.addEventListener('click', (e) => {
+  buttonMenuSwitcher();
   contentSwitcher();
 });
 
 
 // show content essence
 
-const showOffer = document.querySelector('.menu__item--offer-js');
-const showArticles = document.querySelector('.menu__item--articles-js');
-const showContact = document.querySelector('.menu__item--contact-js');
-const offer = document.querySelector('.offer--js');
-const articles = document.querySelector('.articles--js');
-const contact = document.querySelector('.contact--js');
-
-showOffer.addEventListener('click', (e) => {
-  showOffer.classList.toggle('menu__item--open');
+menuOffer.addEventListener('click', (e) => {
+  menuOffer.classList.toggle('menu__item--open');
   offer.classList.toggle('offer--visible');
   if (articles.classList.contains('articles--visible')) {
-    articles.classList.remove('articles--visible');
-    showArticles.classList.remove('menu__item--open');
+    hideArticles()
   }
   if (contact.classList.contains('contact--visible')) {
-    contact.classList.remove('contact--visible');
-    showContact.classList.remove('menu__item--open');
+    hideContact()
   }
 });
 
-showArticles.addEventListener('click', (e) => {
-  showArticles.classList.toggle('menu__item--open');
+menuArticles.addEventListener('click', (e) => {
+  menuArticles.classList.toggle('menu__item--open');
   articles.classList.toggle('articles--visible');
   if (offer.classList.contains('offer--visible')) {
-    offer.classList.remove('offer--visible');
-    showOffer.classList.remove('menu__item--open');
+    hideOffer()
   }
   if (contact.classList.contains('contact--visible')) {
-    contact.classList.remove('contact--visible');
-    showContact.classList.remove('menu__item--open');
+    hideContact()
   }
 });
 
-showContact.addEventListener('click', (e) => {
-  showContact.classList.toggle('menu__item--open');
+menuContact.addEventListener('click', (e) => {
+  menuContact.classList.toggle('menu__item--open');
   contact.classList.toggle('contact--visible');
   if (offer.classList.contains('offer--visible')) {
-    offer.classList.remove('offer--visible');
-    showOffer.classList.remove('menu__item--open');
+    hideOffer()
   }
   if (articles.classList.contains('articles--visible')) {
-    articles.classList.remove('articles--visible');
-    showArticles.classList.remove('menu__item--open');
+    hideArticles()
   }
 });
 
 
 // search
-
-const buttonSearch = document.querySelector('.button__search--js');
 
 buttonSearch.addEventListener('click', (e) => {
   if (content.classList.contains('content--visible')) {
@@ -101,12 +118,11 @@ buttonSearch.addEventListener('click', (e) => {
   }
 });
 
-
 $(function() {
-  $(".navbar__search--js").on("input.highlight", function() {
+  $('.navbar__search--js').on('input.highlight', function() {
     // Determine specified search term
     const searchTerm = $(this).val();
     // Highlight search term inside a specific context
-    $(".content--js").unmark().mark(searchTerm);
-  }).trigger("input.highlight").focus();
+    $('.content--js').unmark().mark(searchTerm);
+  }).trigger('input.highlight').focus();
 });
