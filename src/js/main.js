@@ -15,22 +15,22 @@ const articles = document.querySelector('.articles--js');
 const contact = document.querySelector('.contact--js');
 
 
-const hideOffer = (e) => {
+const hideOffer = () => {
   offer.classList.remove('offer--visible');
   menuOffer.classList.remove('menu__item--open');
 }
 
-const hideArticles = (e) => {
+const hideArticles = () => {
   articles.classList.remove('articles--visible');
   menuArticles.classList.remove('menu__item--open');
 }
 
-const hideContact = (e) => {
+const hideContact = () => {
   contact.classList.remove('contact--visible');
   menuContact.classList.remove('menu__item--open');
 }
 
-const buttonMenuSwitcher = (e) => {
+const buttonMenuSwitcher = () => {
   if (content.classList.contains('content--visible')) {
     searchBar.classList.remove('navbar__search--visible');
     buttonMenu.innerHTML = '<i class="fas fa-bars"></i>';
@@ -41,7 +41,7 @@ const buttonMenuSwitcher = (e) => {
 
 
 // change visible content
-const contentSwitcher = (e) => {
+const contentSwitcher = () => {
   const main = document.querySelector('.main--js');
   const navbar = document.querySelector('.navbar--js');
   const logo = document.querySelector('.navbar__item--logo-js');
@@ -60,12 +60,12 @@ const contentSwitcher = (e) => {
   }
 }
 
-buttonMenu.addEventListener('click', (e) => {
+buttonMenu.addEventListener('click', () => {
   buttonMenuSwitcher();
   contentSwitcher();
 });
 
-showHomepage.addEventListener('click', (e) => {
+showHomepage.addEventListener('click', () => {
   buttonMenuSwitcher();
   contentSwitcher();
 });
@@ -73,7 +73,7 @@ showHomepage.addEventListener('click', (e) => {
 
 // show content essence
 
-menuOffer.addEventListener('click', (e) => {
+menuOffer.addEventListener('click', () => {
   menuOffer.classList.toggle('menu__item--open');
   offer.classList.toggle('offer--visible');
   if (articles.classList.contains('articles--visible')) {
@@ -84,7 +84,7 @@ menuOffer.addEventListener('click', (e) => {
   }
 });
 
-menuArticles.addEventListener('click', (e) => {
+menuArticles.addEventListener('click', () => {
   menuArticles.classList.toggle('menu__item--open');
   articles.classList.toggle('articles--visible');
   if (offer.classList.contains('offer--visible')) {
@@ -95,7 +95,7 @@ menuArticles.addEventListener('click', (e) => {
   }
 });
 
-menuContact.addEventListener('click', (e) => {
+menuContact.addEventListener('click', () => {
   menuContact.classList.toggle('menu__item--open');
   contact.classList.toggle('contact--visible');
   if (offer.classList.contains('offer--visible')) {
@@ -109,7 +109,7 @@ menuContact.addEventListener('click', (e) => {
 
 // search
 
-buttonSearch.addEventListener('click', (e) => {
+buttonSearch.addEventListener('click', () => {
   if (content.classList.contains('content--visible')) {
     searchBar.classList.toggle('navbar__search--visible');
   } else {

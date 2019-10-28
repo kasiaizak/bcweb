@@ -199,6 +199,7 @@ mark {
     display: flex;
     flex-wrap: wrap;
     @include reset-list;
+    animation: show-content-essence 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
   }
   &__item {
     align-self: flex-start;
@@ -243,6 +244,7 @@ mark {
     flex-wrap: wrap;
     justify-content: space-between;
     @include reset-list;
+    animation: show-content-essence 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
   }
   &__item {
     padding: 1em 0;
@@ -267,6 +269,7 @@ mark {
   }
   &__form {
     line-height: 2em;
+    animation: show-content-essence 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
     @media (min-width: $tablet) {
       width: 90%;
     }

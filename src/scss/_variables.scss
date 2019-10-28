@@ -24,3 +24,14 @@ $laptop: 1440px;
     opacity: 1;
   }
 }
+
+@keyframes show-content-essence {
+  0% {
+    transform: rotate3d(1, 1, 0, -80deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate3d(1, 1, 0, 0deg);
+    opacity: 1;
+  }
+}
