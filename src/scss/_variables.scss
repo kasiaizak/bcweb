@@ -12,6 +12,20 @@ $laptop: 1440px;
   padding-left: 0;
 }
 
+@keyframes show-search-bar {
+  0% {
+    transform: rotateX(-100deg);
+    transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0deg);
+    transform-origin: top;
+    opacity: 1;
+  }
+}
+
+
 @keyframes animate-essence-header {
   0% {
     letter-spacing: -0.5em;
