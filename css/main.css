@@ -4948,7 +4948,7 @@ mark {
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
               flex-direction: row;
-      height: 70vh;
+      height: 80vh;
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between;
@@ -4988,7 +4988,8 @@ mark {
           align-self: flex-start;
       -webkit-box-flex: 2;
           -ms-flex-positive: 2;
-              flex-grow: 2; } }
+              flex-grow: 2;
+      margin-top: 5vh; } }
   .essence__header {
     font-size: 2em;
     font-weight: 600;
