@@ -1,3 +1,5 @@
+![cover](https://raw.githubusercontent.com/kasiaizak/bcweb/master/github/screenshot.png)
+
 # bcweb
 
 Zadanie rekrutacyjne polegające na wykonaniu menu pełnoekranowego do strony www przedstawionej na rzucie graficznym w formacie tif - [widok on-line](https://kasiaizak.github.io/bcweb/).
