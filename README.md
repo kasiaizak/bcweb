@@ -1,4 +1,4 @@
-![cover](https://raw.githubusercontent.com/kasiaizak/bcweb/master/github/screenshot.png)
+![cover](https://raw.githubusercontent.com/kasiaizak/tastrona/master/github/screenshot.jpg)
 
 # tastrona
 
